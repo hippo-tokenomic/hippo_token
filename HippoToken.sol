@@ -10,9 +10,9 @@ contract HippoToken is ERC20, Ownable {
      * @dev set name, symbol, and decimal of token
      * @dev mint total supply (cap) to address
      */
-
-
-
+    constructor(address multiSigWallet) ERC20("Hippo Token", "HIPPO") {
+        _mint(multiSigWallet, HARD_CAP);
+    }
 }
 
     
